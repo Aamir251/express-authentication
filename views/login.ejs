@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <% if(success_message !="" ){ %>
+            <p>
+                <%= success_message %>
+            </p>
+            <% } %>
+                <% if(error !="" ){ %>
+                    <p>
+                        <%= error %>
+                    </p>
+                    <% } %>
+                        <h4>Login</h4>
+                        <form class="login-form" action="/login" method="POST">
+                            <div>
+                                <label for="email"></label>
+                                <input type="email" id="email" placeholder="Email" name="email" required>
+                            </div>
+                            <div>
+                                <label for="password"></label>
+                                <input type="password" id="password" placeholder="Password" name="password" required
+                                    autocomplete="no">
+                            </div>
+                            <div>
+                                <p id="register-link">Don't have an Account? <a href="/register">Create One</a></p>
+                                <button>Go</button>
+                            </div>
+                        </form>
+    </div>
+</body>
+
+</html>

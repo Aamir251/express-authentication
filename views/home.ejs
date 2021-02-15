@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    <h3>Welcome</h3>
+    <% if( typeof user !='undefined' ) {%>
+        <p>
+            <%= user.email %>
+        </p>
+        <div class="container">
+            <form action="/addmessage" method="POST">
+                <input type="text" name="message" id="message" autocomplete="no">
+                <button>Submit</button>
+            </form>
+        </div>
+        <div style="display: flex;">
+            <% user.messages.forEach((msg)=> { %>
+                <form action="/deletemessage" method="post">
+                    <input readonly type="text" value="<%= msg %>" name="message">
+                    <br>
+                    <button>X</button>
+                </form>
+                <% }); %>
+        </div>
+        <% } else { %>
+            <p> You have not logged in </p>
+            <p>Click <a href="/login">Here</a> to Login In</p>
+            <% } %>
+
+</body>
+
+</html>

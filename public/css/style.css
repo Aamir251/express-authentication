@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Nunito:wght@400;600&family=Raleway:wght@400;500&family=Roboto&display=swap');
+
+.container {
+    max-width: 300px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.container h4 {
+    color: white;
+    background-color: #8079F2;
+    width: 100px;
+    padding: 5px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+input {
+    border: none;
+    padding: 5px;
+    width: 100%;
+    margin: 5px 0px;
+    border-bottom: 1px solid #978E8E;
+    font-family: "Nunito", sans-serif;
+    font-size: 1rem;
+}
+input:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #7642E4;
+}
+p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+}
+button {
+    border:none;
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-family: "Nunito", sans-serif;
+    background-color:#4F48AF;
+    color: white;
+    font-size: 1rem;
+}
+button:focus {
+    outline: none;
+}
+button:hover {
+    cursor: pointer;
+}
+/* form header background : #8079F2 
+    button background : #4F48AF
+    input bottom border-color : #978E8E
+    input border-color:focus: #7642E4
+    input text-color : #2D1365
+*/
